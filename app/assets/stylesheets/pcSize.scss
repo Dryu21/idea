@@ -1,0 +1,228 @@
+// Place all the styles related to the Homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+html{
+  margin: 0;
+  font-family: 'Noto Sans Japanese',sans-serif;
+}
+body{
+  margin: 0;
+  font-size: 14px;
+}
+.backcolor{
+background-color: #EB7981;
+}
+//header(fixed)
+header{
+  .headercontents{
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width:100%;
+    height:87px;
+    font-size: 18px;
+    background-color:rgba(235,121,129,0.5);
+    .idealogo{
+      margin-right: 10px;
+      width:60px;
+      height: 61px;
+    }
+    .ideatitle{
+      margin-right: 30px;
+      width:75px;
+      height: 30px;
+    }
+    .headerleftWords{
+      .user_links{
+        text-decoration: none;
+        margin-left:5px;
+        color: #fff;
+      }
+    }
+    .headerrightWords{
+      margin-left: auto;
+      margin-bottom: 10px;
+      .login_link{
+        vertical-align: top;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 3px 20px;
+        padding-bottom: 5px;
+        margin-right:5px;
+        color: #fff;
+        border: 2px solid #fff;
+      }
+      .signup_link{
+        vertical-align: top;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 5px 15px;
+        padding-bottom: 5px;
+        margin-right: 10px;
+        background-color: #fff;
+        color: #FDCFBF;
+      }
+    }
+    }
+  }
+//header
+//index
+.indexcontents{
+.firstindexcontents{
+  height: 60%;
+  background: image-url('indexidea.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width:100%;
+  height: 600px;
+  .space{
+    width: 100%;
+    height: 190px;
+  }
+.contentsbox{
+  display: flex;
+  margin: 0 auto;
+  width: 600px;
+  flex-direction: column;
+  h1{
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0;
+    // text-align: left;
+    color: #fff;
+    font-size: 36px;
+  }
+  p{
+    margin: 0;
+    // text-align: left;
+    color: #fff;
+    font-size: 21px;
+  }
+  .search{
+    position:relative;
+    margin-top: 30px;
+    /*検索ボックス*/
+  #sbox2{
+  height:30px;
+  width: 550px;
+  padding:0 10px;
+  border: 0px;
+  border-radius:1px;
+  background:#fff;
+  }
+  #sbtn2{
+  height:30px;
+  width: 30px;
+  position:absolute;
+  right:0px;/*アイコン左右の位置調整*/
+  top:0px;
+  // background:none;
+  color:#666;
+  border:none;
+  font-size:20px;/*アイコンサイズ*/
+  .fa-search{
+    font-size: 14px;
+  }
+  }
+  }
+  .genreselect{
+    margin-top: 3px;
+  	width: 130px;
+    border-radius: 2px;
+    background: #fff;
+    select {
+      font-size: 10px;
+      padding-bottom: 5px;
+      color: #666;
+    	width: 100%;
+    	cursor: pointer;
+    	text-indent: 0.01px;
+    	text-overflow: ellipsis;
+    	border: none;
+    	outline: none;
+    	background: transparent;
+    	background-image: none;
+    	appearance: none;
+    }
+  }
+}
+}
+}
+//index
+//user_new
+.user_new{
+  .space{
+    width: 100%;
+    height: 87px;
+  }
+  .selectcontent{
+     text-align: center;
+    .ideatitle{
+      width:210px;
+      height:84px;
+    }
+    p{
+      margin-top: 40px;
+      font-size: 24px;
+      color:#fff;
+    }
+  }
+  .chose{
+    .student_circle{
+      margin: 100px;
+      margin-top: 50px;
+      display: inline-block;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #fff;
+      .student_link{
+        position: absolute;
+        top:115px;
+        left:102px;
+        text-decoration: none;
+        font-size: 48px;
+        color:#EB7981;
+      }
+    }
+    .businessmen_circle{
+      margin: 100px;
+      margin-top: 50px;
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+      background-color: #fff;
+      border-radius: 50%;
+      .businessmen_link{
+        position: absolute;
+        top: 115px;
+        left: 78px;
+        text-decoration: none;
+        font-size: 48px;
+        color:#EB7981;
+        // text-align: center;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+//student_new
+.student_new{
+  .space{
+    width: 100%;
+    height: 87px;
+  }
+}
+//businessmen_new
+.businessmen_new{
+  .space{
+    width: 100%;
+    height: 87px;
+  }
+}

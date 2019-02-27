@@ -1,0 +1,14 @@
+<header>
+  <div class="headercontents">
+    <%=image_tag("logo.svg", alt:"idealogo",class:"idealogo")%>
+    <%=image_tag("titlelogo.svg", alt:"ideatitle",class:"ideatitle")%>
+    <div class="headerleftWords">
+      <%= link_to "HOME", root_path, class:"user_links" %>
+      <%= link_to "ABOUT", "#", class:"user_links" %>
+    </div>
+    <div class="headerrightWords">
+      <%= link_to "login", "#", class:"login_link" %>
+      <%= link_to "signup", signup_path, class:"signup_link" %>
+    </div>
+  </div>
+</header>

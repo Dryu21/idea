@@ -1,0 +1,20 @@
+<% content_for :backcolor do %>
+backcolor
+<% end %>
+<div class="user_new">
+  <div class="space"></div>
+  <div class="selectcontent">
+    <div class="usercontents">
+      <h1><%=image_tag("titlelogo.svg", alt:"ideatitle",class:"ideatitle")%></h1>
+      <p>あなたは学生か社会人どちらですか？</p>
+    </div>
+    <div class="chose">
+      <div class="student_circle">
+        <%= link_to "学生", studentsignup_path, class:"student_link" %>
+      </div>
+      <div class="businessmen_circle">
+        <%= link_to "社会人", businessmensginup_path, class:"businessmen_link" %>
+      </div>
+    </div>
+  </div>
+</div>
