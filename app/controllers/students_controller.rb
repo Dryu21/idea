@@ -10,6 +10,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)    # 実装は終わっていないことに注意!
     if @student.save
+      log_in @student
       flash[:success] = "ようこそIDEAへ"
       redirect_to @student
     else
@@ -20,6 +21,6 @@ class StudentsController < ApplicationController
   private
 
     def student_params
-      params.require(:student).permit(:name, :email, :password, :password_confirmation)
+      params.require(:student).permit(:name, :email, :password, :password_confirmation, :phonenumber, :belonging, :schoolname, :profile)
     end
 end

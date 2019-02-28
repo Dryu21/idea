@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get  '/signup',  to: 'users#new'
   get  '/studentsignup',  to: 'students#new'
   post '/studentsignup',  to: 'students#create'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
   get  '/businessmensginup', to: 'businessmens#new'
   resources :students
 

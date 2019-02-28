@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StudentTest < ActiveSupport::TestCase
   def setup
-      @user = Student.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
+      @user = Student.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar", phonenumber: "09099585568", belonging:"大学生", schoolname: "芝浦工業大学", profile: "HelloWorld")
     end
 
     test "should be valid" do
@@ -17,15 +17,27 @@ class StudentTest < ActiveSupport::TestCase
      @user.email = "     "
      assert_not @user.valid?
     end
+    test "belonging should be present" do
+     @user.belonging = "     "
+     assert_not @user.valid?
+    end
+    test "schoolname should be present" do
+     @user.schoolname = "     "
+     assert_not @user.valid?
+    end
 
     test "name should not be too long" do
       @user.name = "a" * 51
       assert_not @user.valid?
     end
+    test "schoolname should not be too long" do
+      @user.schoolname = "a" * 51
+      assert_not @user.valid?
+    end
     test "email should not be too long" do
     @user.email = "a" * 244 +"@example.com"
     assert_not @user.valid?
-  end
+    end
 
   test "email validation should accept valid addresses" do
     valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org

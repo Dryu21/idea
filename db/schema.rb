@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_27_154403) do
+ActiveRecord::Schema.define(version: 2019_02_28_070343) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(version: 2019_02_27_154403) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+    t.string "phonenumber"
+    t.string "belonging"
+    t.string "schoolname"
+    t.text "profile"
   end
 
 end

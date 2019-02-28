@@ -1,0 +1,23 @@
+<% content_for :backcolor do %>
+backcolor
+<% end %>
+<div class="login">
+  <div class="space"></div>
+  <div class="logincontents">
+    <h1><%=image_tag("titlelogo.svg", alt:"ideatitle",class:"ideatitle")%></h1>
+    <h2>Login</h2>
+    <p>ログイン</p>
+  </div>
+  <div class="login_form">
+    <%= form_for(:session, url: login_path) do |f| %>
+    <div class="form_content">
+      <%= f.label :email,"メールアドレス",{class: 'form_name'}  %>
+      <%= f.email_field :email, class: 'form-control' %>
+    </div>
+    <div class="form_content">
+      <%= f.label :password,"パスワード",{class: 'form_name'}  %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+    <% end %>
+  </div>
+</div>
