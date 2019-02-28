@@ -6,6 +6,8 @@ gem 'therubyracer'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 gem 'bcrypt',         '3.1.12'
+#エラーメッセージ日本語化
+gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
 gem 'rails-controller-testing'
 # Use Puma as the app server
@@ -16,6 +18,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

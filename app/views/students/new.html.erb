@@ -4,6 +4,25 @@ backcolor
 <div class="student_new">
   <div class="space"></div>
   <div class="student_form">
-    form
+    <%= form_for(@student, url: studentsignup_path) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <div class="form_content">
+        <%= f.label :name,"名前",{class: 'form_name'}  %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="form_content">
+        <%= f.label :email,"メールアドレス",{class: 'form_name'}  %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+      <div class="form_content">
+        <%= f.label :password,"パスワード",{class: 'form_name'}  %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+      <div class="form_content">
+        <%= f.label :password_confirmation,"確認用パスワード",{class: 'form_name'}  %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+      <%= f.submit "登録", class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>

@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   root 'homes#index'
   get  '/signup',  to: 'users#new'
   get  '/studentsignup',  to: 'students#new'
+  post '/studentsignup',  to: 'students#create'
   get  '/businessmensginup', to: 'businessmens#new'
+  resources :students
+
 end
