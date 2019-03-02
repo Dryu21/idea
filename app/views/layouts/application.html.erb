@@ -4,9 +4,6 @@
     <%=render 'layouts/head'%>
   </head>
   <body class="<%= yield :backcolor%>">
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
     <%=render 'layouts/header'%>
     <%= yield %>
   </body>

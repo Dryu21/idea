@@ -11,6 +11,9 @@ backcolor
   <div class="login_form">
     <%= form_for(:session, url: login_path) do |f| %>
     <div class="form_content">
+      <small><%= render 'layouts/flash_messages'%></small>
+    </div>
+    <div class="form_content">
       <%= f.label :email,"メールアドレス",{class: 'form_name'}  %>
       <%= f.email_field :email, class: 'form-control' %>
     </div>
@@ -18,6 +21,13 @@ backcolor
       <%= f.label :password,"パスワード",{class: 'form_name'}  %>
       <%= f.password_field :password, class: 'form-control' %>
     </div>
+    <div class="form_content">
+      <%= f.label :remember_me, class: "check_content" do %>
+      <%= f.check_box :remember_me %>
+      <span>ログイン状態を保持する</span>
+      <% end %>
+    </div>
+      <%= f.submit "登録", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

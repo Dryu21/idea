@@ -325,6 +325,17 @@ header{
         border-radius: 2px;
         border: 1px solid #BDBFB4;
       }
+      .check_content{
+        vertical-align: middle;
+      }
+      span{
+        vertical-align:2px;
+        color: #BDBFB4;
+        font-size:12px;
+      }
+      small{
+        color: #EB7981;
+      }
     }
     .btn-primary{
       color:#fff;
@@ -332,13 +343,24 @@ header{
       font-size: 18px;
       background-color: #EB7981;
       border-radius: 2px;
-      margin-top: 60px;
+      margin-top: 30px;
       width: 500px;
       height: 40px;
     }
   }
 }
 //studentnewlogin
+
+//showstudent
+.student_show{
+  .space{
+    width: 100%;
+    height: 190px;
+  }
+}
+//showstudent
+
+
 //businessmen_new
 .businessmen_new{
 }
