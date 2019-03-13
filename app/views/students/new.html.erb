@@ -1,47 +1,7 @@
 <% content_for :backcolor do %>
 backcolor
 <% end %>
+<% provide(:button_text, 'アカウントを作成') %>
 <div class="student_new">
-  <div class="space"></div>
-  <div class="student_circle">
-    <%= link_to "学生", "#", class:"student_link" %>
-  </div>
-  <div class="student_form">
-    <%= form_for(@student, url: studentsignup_path) do |f| %>
-      <%= render 'shared/error_messages' %>
-      <div class="form_content">
-        <%= f.label :name,"名前",{class: 'form_name'}  %>
-        <%= f.text_field :name, class: 'form-control' %>
-      </div>
-      <div class="form_content">
-        <%= f.label :email,"メールアドレス",{class: 'form_name'}  %>
-        <%= f.email_field :email, class: 'form-control' %>
-      </div>
-      <div class="form_content">
-        <%= f.label :password,"パスワード",{class: 'form_name'}  %>
-        <%= f.password_field :password, class: 'form-control' %>
-      </div>
-      <div class="form_content">
-        <%= f.label :password_confirmation,"確認用パスワード",{class: 'form_name'}  %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-      </div>
-      <div class="form_content">
-        <%= f.label :phonenumber,"電話番号(任意)",{class: 'form_name'}  %>
-        <%= f.text_field :phonenumber, class: 'form-control' %>
-      </div>
-      <div class="form_content">
-        <%= f.label :belonging," 所属",{class: 'form_name'}  %>
-        <%= f.select(:belonging, [['中学生', '中学生'], ['高校生', '高校生'], ['大学生','大学生']] ,:prompt => "選択してください") %>
-      </div>
-      <div class="form_content">
-        <%= f.label :schoolname,"学校名",{class: 'form_name'}  %>
-        <%= f.text_field :schoolname, class: 'form-control' %>
-      </div>
-      <div class="form_content">
-        <%= f.label :profile,"プロフィール",{class: 'form_name'}  %>
-        <%= f.text_area :profile, class: "hogehoge", size: "50x20" %>
-      </div>
-      <%= f.submit "登録", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+ <%=render 'layouts/studentform'%>
 </div>

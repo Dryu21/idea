@@ -45,6 +45,16 @@ header{
     .headerrightWords{
       margin-left: auto;
       margin-bottom: 10px;
+      .logout_link{
+        vertical-align: top;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 5px 15px;
+        padding-bottom: 5px;
+        margin-right: 10px;
+        background-color: #fff;
+        color: #FDCFBF;
+      }
       .login_link{
         vertical-align: top;
         font-size: 15px;
@@ -212,7 +222,7 @@ header{
     }
   }
 }
-//student_new
+//studentsginup
 .student_new{
   display: flex;
   justify-content: center;
@@ -359,7 +369,72 @@ header{
   }
 }
 //showstudent
-
+//studentedit
+.student_edit{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .space{
+    width: 100%;
+    height: 87px;
+  }
+  .student_circle{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 50px 0;
+    .student_link{
+      position: absolute;
+      top: 69px;
+      left: 58px;
+      text-decoration: none;
+      font-size: 42px;
+      color:#EB7981;
+    }
+  }
+  .student_form{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 46%;
+    padding-bottom: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    .form_content{
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      .form_name{
+        color: #BDBFB4;
+        font-size: 18px;
+      }
+        .form-control{
+          margin-top: 3px;
+          width: 500px;
+          height: 30px;
+          border-radius: 2px;
+          border: 1px solid #BDBFB4;
+        }
+    }
+    .btn-primary{
+      color:#fff;
+      border: 0;
+      font-size: 18px;
+      background-color: #EB7981;
+      border-radius: 2px;
+      margin-top: 60px;
+      width: 500px;
+      height: 40px;
+    }
+  }
+}
+//studentedit
 
 //businessmen_new
 .businessmen_new{

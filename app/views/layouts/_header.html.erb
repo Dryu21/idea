@@ -7,17 +7,16 @@
       <%= link_to "ABOUT", "#", class:"user_links" %>
       <%if logged_in?%>
       <%= link_to "USER", student_path(current_student), class:"user_links" %>
+      <%= link_to "EDIT", edit_student_path(current_student), class:"user_links" %>
       <%end%>
     </div>
     <div class="headerrightWords">
       <%if logged_in?%>
-      <%= link_to "logout",logout_path, method: :delete, class:"user_links" %>
+      <%= link_to "logout",logout_path, method: :delete, class:"logout_link" %>
       <%else%>
       <%= link_to "login", login_path, class:"login_link" %>
       <%= link_to "signup", signup_path, class:"signup_link" %>
       <%end%>
     </div>
   </div>
-
-
 </header>

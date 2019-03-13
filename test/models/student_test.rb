@@ -25,6 +25,10 @@ class StudentTest < ActiveSupport::TestCase
      @user.schoolname = "     "
      assert_not @user.valid?
     end
+    test "phonenumber is OK of empty" do
+     @user.phonenumber = "     "
+     assert @user.valid?
+    end
 
     test "name should not be too long" do
       @user.name = "a" * 51
